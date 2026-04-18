@@ -1,7 +1,16 @@
+import os
+import sys
 from PIL import Image
 
-img = Image.open("input.png").convert("RGBA")
+input_path = "input.png"
+output_path = "output.ico"
 
-sizes = [(16,16), (32,32), (48,48), (64,64), (128,128), (256,256)]
+if not os.path.isfile(input_path):
+	print(f"Input file not found: {input_path}", file=sys.stderr)
+	sys.exit(1)
 
-img.save("output.ico", format="ICO", sizes=sizes)
+img = Image.open(input_path).convert("RGBA")
+
+sizes = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)]
+
+img.save(output_path, format="ICO", sizes=sizes)

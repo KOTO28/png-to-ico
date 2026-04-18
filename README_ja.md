@@ -22,3 +22,7 @@ pip install -r requirements.txt
 # 変換スクリプトの実行
 python make_ico.py
 ```
+
+## 注意事項
+
+- Python 3.12.9での動作を確認しています。

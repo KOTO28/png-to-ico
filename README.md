@@ -22,3 +22,7 @@ pip install -r requirements.txt
 # Run the conversion script
 python make_ico.py
 ```
+
+## Notes
+
+- Tested with Python 3.12.9.
